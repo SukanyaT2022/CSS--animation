@@ -1,0 +1,59 @@
+.moveBox{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    animation-name: dance; /* it important to use name to match with name next to @keyframes below*/
+    animation-duration: 5s;
+    animation-iteration-count: 3;/*how many time we want it move such as 2 or 3 time or infinite IS ALL TIHE TIME*/
+    margin: 60px auto;/* auto make box move to the center*/
+    animation-direction: reverse; 
+    /* reverse to square to round--alternate will do both way round to sqaure and square to round*/
+    animation-play-state: running; /*make box stop to spin by using paused or put running to make box spin again*/
+animation-timing-function: ease; /*make box move more smooth for sppedb staring and ending speed*/
+
+
+}
+
+.moveBox img{
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes dance{
+
+    0%{
+        border-radius: 40%;
+        background-color: pink; /*this is the first move*/
+    }
+
+    25%{
+        border-radius: 0%;
+        background-color: rgb(246, 255, 192); /*this is the second move--it get bigger and change color*/
+        height: 300px;
+        width: 300px;
+    }
+
+    50%{
+        border-radius: 0%;
+        background-color:orange; /*this is the last move--it get even bigger and change color*/
+        height: 400px;
+        width: 400px;
+    /*transform: rotate(180deg);*/
+    /* this make the box spin based in degree*/
+    /* should only one trasform*/
+
+    transform: translateX(-50%);
+    /* 50% move to right and if put -50% it will go  way go to left*/
+    /* make box move left and right*/
+
+    /*transform: translateY(50%);*/
+    /*if u put -50% it will go up*/
+    /* make box move up and down*/
+
+    /*transform: translate(50%);*/
+    /* only traslate make box move four directions-- most of time we use trasform x or y*/
+    }
+
+
+
+}
